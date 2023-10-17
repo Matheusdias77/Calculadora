@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://127.0.0.1:5500/atividade/index.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Calculadora_files/index.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora</h1>
+        <p class="tela"></p>
+        <table>
+            <tbody><tr>
+                <td><button onclick="limpar()">C</button></td>
+                <td><button onclick="calc(&#39;**&#39;)">x²</button></td>
+                <td><button onclick="calc(&#39;/&#39;)">÷</button></td>
+                <td><button onclick="apagar()">⇐</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="calc(&#39;7&#39;)">7</button></td>
+                <td><button onclick="calc(&#39;8&#39;)">8</button></td>
+                <td><button onclick="calc(&#39;9&#39;)">9</button></td>
+                <td><button onclick="calc(&#39;*&#39;)">x</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="calc(&#39;4&#39;)">4</button></td>
+                <td><button onclick="calc(&#39;5&#39;)">5</button></td>
+                <td><button onclick="calc(&#39;6&#39;)">6</button></td>
+                <td><button onclick="calc(&#39;-&#39;)">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="calc(&#39;1&#39;)">1</button></td>
+                <td><button onclick="calc(&#39;2&#39;)">2</button></td>
+                <td><button onclick="calc(&#39;3&#39;)">3</button></td>
+                <td><button onclick="calc(&#39;+&#39;)">+</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button onclick="calc(&#39;0&#39;)" style="width: 102px;">0</button></td>
+                <td><button onclick="calc(&#39;.&#39;)">.</button></td>
+                <td><button onclick="calcular()" style="background-color: rgb(20, 151, 211);">=</button></td>
+            </tr>
+        </tbody></table>
+    </div>
+    <script src="./Calculadora_files/index.js.download"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
